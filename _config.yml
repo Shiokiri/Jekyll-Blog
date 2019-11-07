@@ -1,9 +1,9 @@
 # Site settings
-title: neoSoda
-subtitle: 落影汐雾
-description: Hello
+title: 落影汐雾
+subtitle: neoSoda's cosmos and dream
+description: 
 baseurl: # the subpath of your site, e.g. /blog
-url: "http://neosoda.66ccff.xyz" # 你的域名
+url: "https://neosoda.66ccff.xyz" # 你的域名
 page_no_title: "No title" # 文章无标题时默认显示内容
 beian: # "备案号"
 email: xluoying2017@gmail.com
@@ -17,8 +17,8 @@ paginate: 10 # 分页大小
 paginate_path: ":num"
 
 # Search settings
-baidu_search: true
-google_search: # true
+baidu_search: false
+google_search: false
 
 # Menu settings
 menu:
@@ -28,17 +28,17 @@ menu:
   - page: 归档
     directory: archives/
     icon: icon-archive
-  - page: 关于
-    directory: about/
-    icon: icon-about
-  - page: 历史
-    directory: history/
-    icon: icon-history
-  - page: 订阅
-    directory: feed.xml
-    icon: icon-rss
+  # - page: 关于
+  #   directory: about/
+  #   icon: icon-about
+  # - page: 历史
+  #   directory: history/
+  #   icon: icon-history
+  # - page: 订阅
+  #   directory: feed.xml
+  #   icon: icon-rss
 
 # Link settings
 links: # 友情链接
-  # - title: site-name1
-  #   url: http://www.example1.com/
+  # - title: neoSoda
+  #   url: https://66ccff.xyz

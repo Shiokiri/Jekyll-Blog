@@ -295,7 +295,7 @@ a:focus {
 /* for different pages starts*/
 .post-archive {
   font-size: 15px;
-  line-height: 2;
+  line-height: 1;
   padding-bottom: .8em; }
   .post-archive h2 {
     margin: 0;
