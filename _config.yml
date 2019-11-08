@@ -7,6 +7,7 @@ url: "https://neosoda.66ccff.xyz" # 你的域名
 page_no_title: "No title" # 文章无标题时默认显示内容
 beian: # "备案号"
 email: xluoying2017@gmail.com
+permalink: /:title
 
 # Build settings
 markdown: kramdown
