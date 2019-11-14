@@ -70,14 +70,14 @@
             </div>
 
             <div class="widget">
-              <div class="widget-title">分类</div>
-              <ul class="category-list">
-                {% for category in site.categories %}
-                  <li class="category-list-item">
-                    <a class="category-list-link" href="{{ site.baseurl }}/category/{{ category[0] }}">{{ category[0] }}</a>
-                  </li>
-                {% endfor %}
-              </ul>
+                <div class="widget-title">分类</div>
+                <ul class="category-list">
+                  {% for category in site.categories %}
+                    <li class="category-list-item">
+                      <a class="category-list-link" href="{{ site.baseurl }}/category/{{ category[0] }}">{{ category[0] }}</a>
+                    </li>
+                  {% endfor %}
+                </ul>
             </div>
 
             <div class="widget">
@@ -97,9 +97,6 @@
         <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/"> {{ site.beian }}.</a>
         {% endif %}
       </div>
-      
-
-      <a id="rocket" href="#top" class="show"></a>
       
       <script src="/js/jquery.min.js" type="text/javascript"></script>
       <script src="/js/fancybox.pack.js" type="text/javascript"></script>
