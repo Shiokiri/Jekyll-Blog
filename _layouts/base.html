@@ -64,7 +64,7 @@
 
             <div class="widget">
                 <div class="widget-title">关于</div>
-                <p>记录我的一些生活<br>希望能满足你的好奇心<br>嗯……如果能加载DISQUS<br>愿阁下评论一下</p>
+                <p>记录一点生活<br>希望能满足你的好奇心<br>嗯……如果能加载DISQUS<br>愿阁下评论一下</p>
                 <ul></ul>
                 <p>个人主页：<a href="https://66ccff.xyz" title="ShioKiri" target="_blank">ShioKiri</a></p>
             </div>
@@ -74,7 +74,7 @@
                 <ul class="category-list">
                   {% for category in site.categories %}
                     <li class="category-list-item">
-                      <a class="category-list-link" href="{{ site.baseurl }}/category/{{ category[0] }}">{{ category[0] }}</a>
+                      <a class="category-list-link" href="{{ site.baseurl }}/category/?key={{ category[0] }}">{{ category[0] }}</a>
                     </li>
                   {% endfor %}
                 </ul>
