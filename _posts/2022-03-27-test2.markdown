@@ -1,0 +1,9 @@
+---
+layout: post
+title: test2
+date: 2022-03-26 17:22:07
+categories: 随笔
+comments: true
+---
+
+![](https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/avatar2.png)
