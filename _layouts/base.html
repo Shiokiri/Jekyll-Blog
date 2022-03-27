@@ -90,36 +90,11 @@
                 </ul>
             </div>
               
-            <div class="widget">
-                <div class="widget-title">标签</div>
-                <div class="tagcloud">
-                  {% for tag in site.tags %}
-                    <a href="{{ site.baseurl }}/tag/?key={{ tag[0] }}" style="font-size: 15px;">{{ tag[0] }}</a>
-                  {% endfor %}
-                </div>
-            </div>
-              
-            <div class="widget">
-                <div class="widget-title">相关推荐</div>
-                <ul class="post-list">
-                {% for post in site.related_posts %}
-                  <li class="post-list-item"><a class="post-list-link" href="{{ post.url | prepend: site.baseurl }}">{% if post.title %} {{ post.title }} {% else %} {{ site.page_no_title }} {% endif %}</a></li>
-                {% endfor %}
-                </ul>
-            </div>
-              
-            <div class="widget">
-              <div class="widget-title">友情链接</div>
-              {% for link in site.links %}
-                <a href="{{ site.baseurl }}/{{ menu.directory }}"><i class="{{ menu.icon }}"> {{ menu.page }}</i></a>
-                <ul></ul><a href="{{ link.url }}" title="{{ link.title }}" target="_blank">{{ link.title }}</a>
-              {% endfor %}
-            </div>
           </div>
         </div>
       </div>
       
-      <div id="footer">© 2016 
+      <div id="footer">© 2019-2022 
         <a href="/." rel="nofollow">{{ site.title }}.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
         {% if site.beian %}
         <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/"> {{ site.beian }}.</a>
