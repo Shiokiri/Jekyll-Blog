@@ -17,7 +17,7 @@ github_username: shiokiri
 twitter_username:
 
 # Pageinate settings
-paginate: 10 # 分页大小
+paginate: 15 # 分页大小
 paginate_path: ":num"
 
 # Search settings
