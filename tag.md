@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Category
-permalink: /category/
+title: Tag
+permalink: /tag/
 ---
 
 <script>
@@ -34,7 +34,7 @@ permalink: /category/
     <ul class="listing" style="display: none;">
       <li>
       <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
-      <a href="{{ post.url | prepend: site.baseurl }}" key="{{ post.categories }}">
+      <a href="{{ post.url | prepend: site.baseurl }}" key="{{ post.tags }}">
       {% if post.title %}
   		{{ post.title }}
   	  {% else %}
@@ -55,7 +55,7 @@ permalink: /category/
       if ($(item).attr('key').toLowerCase().indexOf(key.toLowerCase()) == -1) {
         $(item.parentElement.parentElement).remove();
       } else {
-      	$(item.parentElement.parentElement).show();
+        $(item.parentElement.parentElement).show();
       }
     }
     if ($('.post-archive a').length == 0) {

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Category
-permalink: /category/
+title: Search
+permalink: /search/
 ---
 
 <script>
@@ -20,8 +20,6 @@ permalink: /category/
   }
   if (key.indexOf('/') != -1) {
     key = '';
-  } else {
-    key = decodeURI(key);
   }
 </script>
 
@@ -34,7 +32,7 @@ permalink: /category/
     <ul class="listing" style="display: none;">
       <li>
       <span class="date">{{ post.date | date: "%Y/%m/%d" }}</span>
-      <a href="{{ post.url | prepend: site.baseurl }}" key="{{ post.categories }}">
+      <a href="{{ post.url | prepend: site.baseurl }}">
       {% if post.title %}
   		{{ post.title }}
   	  {% else %}
@@ -52,10 +50,10 @@ permalink: /category/
     var items = $('.post-archive a');
     for (var i=0; i<items.length; i++) {
       var item = items[i];
-      if ($(item).attr('key').toLowerCase().indexOf(key.toLowerCase()) == -1) {
+      if (item.text.toLowerCase().indexOf(key.toLowerCase()) == -1) {
         $(item.parentElement.parentElement).remove();
       } else {
-      	$(item.parentElement.parentElement).show();
+        $(item.parentElement.parentElement).show();
       }
     }
     if ($('.post-archive a').length == 0) {

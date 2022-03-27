@@ -7,8 +7,7 @@
   <meta content="black-translucent" name="apple-mobile-web-app-status-bar-style">
   <meta content="telephone=no" name="format-detection">
   
-  <title>{% if page.title %}{{ page.title }}&nbsp|&nbsp{% endif %}{% if site.title %}{{ site.title }}{% endif %}</title>
-  <link rel="shortcut icon" href="/fonts/logo.png" />
+  <title>{% if page.title %}{{ site.title }} | {{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -19,6 +18,10 @@
   <link rel="stylesheet" type="text/css" href="{{ "/css/pure-min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" type="text/css" href="{{ "/css/grids-responsive-min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" type="text/css" href="{{ "/css/style.css" | prepend: site.baseurl }}">
+
+  <link rel="stylesheet" href="/js/styles/darcula.css">
+  <script src="/js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
 </head>
 
   <body>
@@ -61,14 +64,21 @@
         
         <div class="pure-u-1-4">
           <div id="sidebar">
-
             <div class="widget">
-                <div class="widget-title">关于</div>
-                <p>记录一点生活<br>希望能满足你的好奇心<br>嗯……如果能加载DISQUS<br>愿阁下评论一下</p>
-                <ul></ul>
-                <p>个人主页：<a href="https://66ccff.xyz" title="ShioKiri" target="_blank">ShioKiri</a></p>
+              {% if site.baidu_search %}
+                <form action="//www.baidu.com/s?gpc=stf" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                  <input type="text" name="q1" maxlength="20" placeholder="Search" class="search-form-input">
+                  <input type="hidden" name="q6" value="{{ site.domain }}">
+                </form>
+              {% endif %}
+              {% if site.google_search %}
+                <form action="//www.google.com/search" method="get" accept-charset="utf-8" target="_blank" class="search-form">
+                <input type="text" name="q" maxlength="20" placeholder="Search" class="search-form-input">
+                <input type="hidden" name="sitesearch" value="{{ site.domain }}">
+                </form>
+              {% endif %}
             </div>
-
+            
             <div class="widget">
                 <div class="widget-title">分类</div>
                 <ul class="category-list">
@@ -79,9 +89,27 @@
                   {% endfor %}
                 </ul>
             </div>
-
+              
             <div class="widget">
-              <div class="widget-title">链接</div>
+                <div class="widget-title">标签</div>
+                <div class="tagcloud">
+                  {% for tag in site.tags %}
+                    <a href="{{ site.baseurl }}/tag/?key={{ tag[0] }}" style="font-size: 15px;">{{ tag[0] }}</a>
+                  {% endfor %}
+                </div>
+            </div>
+              
+            <div class="widget">
+                <div class="widget-title">相关推荐</div>
+                <ul class="post-list">
+                {% for post in site.related_posts %}
+                  <li class="post-list-item"><a class="post-list-link" href="{{ post.url | prepend: site.baseurl }}">{% if post.title %} {{ post.title }} {% else %} {{ site.page_no_title }} {% endif %}</a></li>
+                {% endfor %}
+                </ul>
+            </div>
+              
+            <div class="widget">
+              <div class="widget-title">友情链接</div>
               {% for link in site.links %}
                 <a href="{{ site.baseurl }}/{{ menu.directory }}"><i class="{{ menu.icon }}"> {{ menu.page }}</i></a>
                 <ul></ul><a href="{{ link.url }}" title="{{ link.title }}" target="_blank">{{ link.title }}</a>
@@ -91,14 +119,18 @@
         </div>
       </div>
       
-      <div id="footer">© 2019
+      <div id="footer">© 2016 
         <a href="/." rel="nofollow">{{ site.title }}.</a> Theme by<a rel="nofollow" target="_blank" href="https://github.com/alafighting/maupassant-jekyll"> Maupassant.</a>
         {% if site.beian %}
         <a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/"> {{ site.beian }}.</a>
         {% endif %}
       </div>
       
+
+      <a id="rocket" href="#top" class="show"></a>
+      
       <script src="/js/jquery.min.js" type="text/javascript"></script>
+      <script src="/js/totop.js" type="text/javascript"></script>
       <script src="/js/fancybox.pack.js" type="text/javascript"></script>
       <script src="/js/jquery.fancybox.js" type="text/javascript"></script>
       <link rel="stylesheet" href="/css/jquery.fancybox.css" type="text/css">
