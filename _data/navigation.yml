@@ -1,5 +1,8 @@
 header:
   - titles:
+      zh-Hans : &ZH_HANS  归档
+    url: /
+  - titles:
       # @start locale config
       en      : &EN       Archive
       en-GB   : *EN
