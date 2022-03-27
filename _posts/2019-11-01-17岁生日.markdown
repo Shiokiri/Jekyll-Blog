@@ -1,11 +1,10 @@
 ---
-layout: post
 title: 写在17岁生日
-date: 2019-11-01 20:43:07
-categories: 历史
-comments: true
+tags: 历史
 ---
 
 感觉现在价值观念、人生理想和兴趣爱好明确多了。
+
+<!--more-->
 
 至少比起去年这个时候的我来说是的。

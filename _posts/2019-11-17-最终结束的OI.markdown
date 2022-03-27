@@ -1,9 +1,6 @@
 ---
-layout: post
 title: 最终结束的OI
-date: 2019-11-17 17:22:07
-categories: 随笔
-comments: true
+tags: 随笔
 ---
 
 从day1结束的无限自闭到day2总算打出暴力dp，我的OI生活终究在此刻结束了。
