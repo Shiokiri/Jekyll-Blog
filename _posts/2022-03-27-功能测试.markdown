@@ -1,0 +1,21 @@
+---
+title: test
+tags: 随笔
+---
+
+# 一级标题
+
+## 二级标题
+
+# LaTeX
+
+$x^2_i$
+
+
+$$
+\sum_{i=1}^{n} i^3
+$$
+
+# 图片
+
+![](https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/daily_pic_2.png)
