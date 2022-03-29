@@ -3,7 +3,8 @@ header:
       # @start locale config
       zh-Hans : &ZH_HANS  主页
       # @end locale config
-    url: /archive.html
+    url: /
+    
   - titles:
       # @start locale config
       en      : &EN       Archive
