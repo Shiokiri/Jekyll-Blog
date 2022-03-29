@@ -65,4 +65,4 @@ public class OnlineNoteBackendApplication {
 
 # 链接
 
-[Shiokiri | 落影汐雾](https://lyxw.xyz/)
+[Shiokiri \| 落影汐雾](https://lyxw.xyz)
