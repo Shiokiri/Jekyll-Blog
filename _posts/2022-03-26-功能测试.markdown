@@ -19,3 +19,22 @@ $$
 # 图片
 
 ![](https://cdn.jsdelivr.net/gh/shiokiri/cdn/img/daily_pic_2.png)
+
+# 代码
+
+```java
+package com.werun.onlinenote_backend;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class OnlineNoteBackendApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(OnlineNoteBackendApplication.class, args);
+    }
+
+}
+```
+
